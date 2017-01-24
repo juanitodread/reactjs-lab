@@ -11,7 +11,7 @@ class ProductTable extends Component {
     let lastCategory = null;
 
     products.forEach(product => {
-      if(product.name.indexOf(this.props.filterText) === -1 ||
+      if(product.name.toLowerCase().indexOf(this.props.filterText.toLowerCase()) === -1 ||
       (!product.stocked && this.props.inStockOnly)) {
         return;
       }
