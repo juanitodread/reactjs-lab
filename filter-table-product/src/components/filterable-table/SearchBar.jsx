@@ -22,11 +22,12 @@ class SearchBar extends Component {
           onChange={this.handleChange} />
         <p>
           <input type='checkbox'
+            id='searchChk'
             checked={this.props.inStockOnly}
             ref={input => this.inStockOnlyInput = input}
             onChange={this.handleChange} />
           {' '}
-          Only show products in stock
+          <label htmlFor='searchChk'>Only show products in stock</label>
         </p>
       </form>
     );

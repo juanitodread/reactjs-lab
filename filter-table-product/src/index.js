@@ -13,4 +13,4 @@ const Products = [
 ];
 
 ReactDOM.render(<FilterableProductTable products={Products} />,
-  document.getElementById('main'));
+  document.getElementById('filterable'));
