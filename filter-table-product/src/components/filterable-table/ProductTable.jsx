@@ -1,3 +1,8 @@
+import React from 'react';
+
+import ProductRow from './ProductRow';
+import ProductCategoryRow from './ProductCategoryRow';
+
 class ProductTable extends React.Component {
   render() {
     const products = this.props.products;
@@ -33,3 +38,5 @@ class ProductTable extends React.Component {
     );
   }
 }
+
+export default ProductTable;

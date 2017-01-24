@@ -1,3 +1,5 @@
+import React from 'react';
+
 class ProductRow extends React.Component {
   render() {
     const product = this.props.product;
@@ -14,3 +16,5 @@ class ProductRow extends React.Component {
     );
   }
 }
+
+export default ProductRow;

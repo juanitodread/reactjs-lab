@@ -1,3 +1,5 @@
+import React from 'react';
+
 class SearchBar extends React.Component {
   render() {
     return (
@@ -12,3 +14,5 @@ class SearchBar extends React.Component {
     );
   }
 }
+
+export default SearchBar;
