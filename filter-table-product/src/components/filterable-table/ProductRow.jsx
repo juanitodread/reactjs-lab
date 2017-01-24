@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-class ProductRow extends React.Component {
+class ProductRow extends Component {
   render() {
     const product = this.props.product;
     const name = product.stocked ? product.name :
