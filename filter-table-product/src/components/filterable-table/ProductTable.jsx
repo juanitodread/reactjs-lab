@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import ProductRow from './ProductRow';
 import ProductCategoryRow from './ProductCategoryRow';
 
-class ProductTable extends React.Component {
+class ProductTable extends Component {
   render() {
     const products = this.props.products;
     const rows = [];
