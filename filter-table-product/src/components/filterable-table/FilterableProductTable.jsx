@@ -11,13 +11,23 @@ class FilterableProductTable extends Component {
       filterText: '',
       inStockOnly: false
     };
+
+    this.handleUserInput = this.handleUserInput.bind(this);
+  }
+
+  handleUserInput(filterText, inStockOnly) {
+    this.setState({
+      filterText,
+      inStockOnly
+    });
   }
 
   render() {
     return (
       <div>
         <SearchBar filterText={this.state.filterText}
-          inStockOnly={this.props.inStockOnly} />
+          inStockOnly={this.state.inStockOnly}
+          onUserInput={this.handleUserInput} />
         <ProductTable products={this.props.products}
           filterText={this.state.filterText}
           inStockOnly={this.state.inStockOnly} />
