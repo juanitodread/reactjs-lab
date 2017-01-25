@@ -12,5 +12,9 @@ const Products = [
   {category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7'}
 ];
 
-ReactDOM.render(<FilterableProductTable products={Products} />,
+const user = {name: 'Juan', role: 'admin'};
+// const user = {name: 'Antonio', role: 'service'};
+// const user = {name: 'Root', role: 'root'};
+
+ReactDOM.render(<FilterableProductTable products={Products} user={user} />,
   document.getElementById('filterable'));
