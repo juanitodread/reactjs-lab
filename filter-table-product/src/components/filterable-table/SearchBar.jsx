@@ -1,8 +1,13 @@
-import React, {Component} from 'react';
+import React from 'react';
+import RoleAwareComponent from '../security/RoleAwareComponent';
 
-class SearchBar extends Component {
+class SearchBar extends RoleAwareComponent {
   constructor(props) {
     super(props);
+
+    //Auth
+    this.user = props.user;
+    this.auth = props.auth;
 
     this.handleChange = this.handleChange.bind(this);
   }
@@ -13,7 +18,7 @@ class SearchBar extends Component {
   }
 
   render() {
-    return (
+    const jsxComponent = (
       <form>
         <input type='text'
           placeholder='Search...'
@@ -31,6 +36,8 @@ class SearchBar extends Component {
         </p>
       </form>
     );
+
+    return this.shouldBeVisible() ? jsxComponent : null;
   }
 }
 
